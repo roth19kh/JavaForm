@@ -5,6 +5,7 @@
 package JavaForm;
 
 import java.text.DecimalFormat;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -33,14 +34,16 @@ public class ValueLogin extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
         lblUsername = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        txtResult = new javax.swing.JTextArea();
         jLabel1 = new javax.swing.JLabel();
         txtValue1 = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         txtValue2 = new javax.swing.JTextField();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        txtResult = new javax.swing.JTextArea();
         txtCal = new javax.swing.JButton();
+        btnBack = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setFont(new java.awt.Font(" Kh BL BrushHand", 0, 14)); // NOI18N
@@ -52,10 +55,9 @@ public class ValueLogin extends javax.swing.JFrame {
 
         lblUsername.setFont(new java.awt.Font("Helvetica Neue", 0, 12)); // NOI18N
         lblUsername.setText("User Test");
+        lblUsername.setToolTipText("");
 
-        jLabel1.setText("Value 1");
-
-        jLabel2.setText("Value 1");
+        jScrollPane1.setToolTipText("");
 
         txtResult.setEditable(false);
         txtResult.setColumns(20);
@@ -63,58 +65,104 @@ public class ValueLogin extends javax.swing.JFrame {
         txtResult.setVerifyInputWhenFocusTarget(false);
         jScrollPane1.setViewportView(txtResult);
 
+        jLabel1.setText("Value 1");
+        jLabel1.setToolTipText("");
+
+        txtValue1.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+        txtValue1.setToolTipText("");
+        txtValue1.setAlignmentX(1.0F);
+        txtValue1.setAlignmentY(1.0F);
+
+        jLabel2.setText("Value 1");
+        jLabel2.setToolTipText("");
+
+        txtValue2.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
+        txtValue2.setToolTipText("");
+        txtValue2.setAlignmentX(1.0F);
+        txtValue2.setAlignmentY(1.0F);
+
         txtCal.setText("Calculate");
+        txtCal.setToolTipText("");
         txtCal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtCalActionPerformed(evt);
             }
         });
 
+        btnBack.setText("Back");
+        btnBack.setToolTipText("");
+        btnBack.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBackActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(lblUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnBack))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                        .addComponent(jLabel1)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED))
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(jLabel2)
+                                        .addGap(12, 12, 12)))
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(txtValue1)
+                                    .addComponent(txtValue2, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(txtCal)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap(12, Short.MAX_VALUE)
+                .addComponent(lblUsername)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(txtValue1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(txtValue2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtCal))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnBack)
+                .addContainerGap())
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(63, 63, 63)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                        .addComponent(jLabel1)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel2)
-                                        .addGap(12, 12, 12)))
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(txtValue1, javax.swing.GroupLayout.DEFAULT_SIZE, 102, Short.MAX_VALUE)
-                                    .addComponent(txtValue2))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(txtCal))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(19, 19, 19)
-                        .addComponent(lblUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(90, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(29, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(29, 29, 29))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(15, 15, 15)
-                .addComponent(lblUsername)
-                .addGap(29, 29, 29)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(txtValue1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtCal))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(txtValue2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(63, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30))
         );
 
         pack();
@@ -122,25 +170,45 @@ public class ValueLogin extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
-
+        txtValue1.requestFocusInWindow();
         lblUsername.setText("This is: "+user);
     }//GEN-LAST:event_formWindowOpened
 
     private void txtCalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCalActionPerformed
         double v1 = Double.parseDouble(txtValue1.getText());
         double v2 = Double.parseDouble(txtValue2.getText());
-        
+
         double result = v1+v2;
         DecimalFormat df =new DecimalFormat("#.##");
         String r = df.format(v1) + "+" + df.format(v2) +"="+ result+ "\r\n";
         txtResult.append(r);
-        
+        txtValue1.setText("");
+        txtValue2.setText("");
+        txtValue1.requestFocusInWindow();
         // TODO add your handling code here:
     }//GEN-LAST:event_txtCalActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
+    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
+        // TODO add your handling code here:
+        
+        
+        int response = JOptionPane.showConfirmDialog(
+            null, 
+            "Do you want to back?", 
+            "Confirmation", 
+            JOptionPane.OK_CANCEL_OPTION
+        );
+
+        if (response == JOptionPane.OK_OPTION) {
+            new Login().setVisible(true);
+        } else if (response == JOptionPane.CANCEL_OPTION) {
+            System.out.println("User clicked Cancel");
+        } else {
+            System.out.println("User closed the dialog");
+        }
+        
+    }//GEN-LAST:event_btnBackActionPerformed
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -174,8 +242,10 @@ public class ValueLogin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnBack;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblUsername;
     private javax.swing.JButton txtCal;
