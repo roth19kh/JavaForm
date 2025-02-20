@@ -176,7 +176,6 @@ public class ListJava extends javax.swing.JFrame {
             }
         });
     }
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JList<String> ListCountry;
     private javax.swing.JButton btnAdd;
