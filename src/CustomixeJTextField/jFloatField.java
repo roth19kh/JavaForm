@@ -4,6 +4,7 @@
  */
 package CustomixeJTextField;
 
+import java.awt.event.FocusListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import javax.swing.JTextField;
@@ -38,25 +39,7 @@ public class jFloatField extends JTextField {
         } else {
             if (!Character.isDigit(e.getKeyChar())) {
                 e.consume();
-            } else {
-                String text = this.getText();
-                if (text.length() >= digit) {
-                    e.consume();
-                }
-            }
+        }
         }
     }
-    private int digit = -1;
-
-    public int getDigit() {
-        return digit;
-    }
-
-    /**
-     * @param digit the digit to set
-     */
-    public void setDigit(int digit) {
-        this.digit = digit;
-    }
-
 }

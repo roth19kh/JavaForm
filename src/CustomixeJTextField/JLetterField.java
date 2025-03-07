@@ -28,30 +28,35 @@ public class JLetterField extends JTextField {
 
     private void thisLatterField(KeyEvent e) {
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-        if (Character.isDigit(e.getKeyChar())) {
+        if (!Character.isLetter(e.getKeyChar())
+                && !Character.isWhitespace(e.getKeyChar())) {
             e.consume();
         } else {
-            String text = this.getText();
-            if(text.length() >=getDigit()){
-                e.consume();
+
+            if (getLength() >= 0) {
+                String text = this.getText();
+                if (text.length() >= getLength()) {
+                    e.consume();
+                }
             }
         }
 
     }
+
+    private int length = -1;
+
+    /**
+     * @return the length
+     */
+    public int getLength() {
+        return length;
+    }
+
+    /**
+     * @param length the length to set
+     */
+    public void setLength(int length) {
+        this.length = length;
+    }
     
-    private int digit = -1;
-
-    /**
-     * @return the digit
-     */
-    public int getDigit() {
-        return digit;
-    }
-
-    /**
-     * @param digit the digit to set
-     */
-    public void setDigit(int digit) {
-        this.digit = digit;
-    }
 }
