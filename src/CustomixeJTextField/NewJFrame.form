@@ -7,13 +7,14 @@
   </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
+    <Property name="title" type="java.lang.String" value="Customize JTextField"/>
     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
       <Font name="Poppins" size="24" style="0"/>
     </Property>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
-    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="true"/>
   </SyntheticProperties>
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
@@ -30,30 +31,44 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace pref="265" max="32767" attributes="0"/>
-              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="jNumberField2" pref="417" max="32767" attributes="0"/>
-                  <Component id="jFloatField1" max="32767" attributes="0"/>
-                  <Component id="jLetterField1" max="32767" attributes="0"/>
-                  <Component id="jStringField1" max="32767" attributes="0"/>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="jNumberField2" max="32767" attributes="0"/>
+                      <Component id="jLetterField1" max="32767" attributes="0"/>
+                      <Component id="jStringField1" alignment="1" pref="417" max="32767" attributes="0"/>
+                      <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="jFloatField1" alignment="1" max="32767" attributes="0"/>
+                  </Group>
               </Group>
-              <EmptySpace min="-2" pref="74" max="-2" attributes="0"/>
+              <EmptySpace pref="60" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+          <Group type="102" attributes="0">
+              <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
+              <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
               <Component id="jNumberField2" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
               <Component id="jFloatField1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
               <Component id="jLetterField1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
+              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
               <Component id="jStringField1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="211" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -63,7 +78,7 @@
       <Properties>
         <Property name="degit" type="int" value="20"/>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Poppins" size="24" style="0"/>
+          <Font name="Poppins" size="18" style="0"/>
         </Property>
       </Properties>
     </Component>
@@ -71,16 +86,62 @@
       <Properties>
         <Property name="digit" type="int" value="20"/>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Poppins" size="24" style="0"/>
+          <Font name="Poppins" size="18" style="0"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jFloatField1ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="CustomixeJTextField.JLetterField" name="jLetterField1">
       <Properties>
         <Property name="digit" type="int" value="20"/>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Poppins" size="18" style="0"/>
+        </Property>
       </Properties>
     </Component>
     <Component class="CustomixeJTextField.JStringField" name="jStringField1">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Poppins" size="18" style="0"/>
+        </Property>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jStringField1ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel1">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Poppins" size="12" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="String Field:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel2">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Poppins" size="12" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Number Field:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel3">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Poppins" size="12" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Floating Field:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel4">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Poppins" size="12" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Letter Field:"/>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>
