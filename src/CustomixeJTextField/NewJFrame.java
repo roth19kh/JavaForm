@@ -42,6 +42,7 @@ public class NewJFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Customize JTextField");
+        setAutoRequestFocus(false);
         setFont(new java.awt.Font("Poppins", 0, 24)); // NOI18N
 
         jNumberField2.setDegit(20);
@@ -114,6 +115,8 @@ public class NewJFrame extends javax.swing.JFrame {
                 .addComponent(jStringField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(60, 60, 60))
         );
+
+        getAccessibleContext().setAccessibleDescription("");
 
         pack();
         setLocationRelativeTo(null);
